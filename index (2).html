@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Emergencias Médicas - Stanford</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#0a0f1f;
+color:white;
+}
+
+/* HERO */
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,0.8),rgba(198,40,40,0.6)),
+url('https://images.unsplash.com/photo-1579684385127-1ef15d508118');
+background-size:cover;
+}
+
+h1{font-size:45px;}
+
+.section{
+padding:60px 10%;
+}
+
+.card{
+background:#111;
+padding:25px;
+border-radius:10px;
+margin-top:20px;
+}
+
+/* SIMULADOR */
+input,textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+
+/* IA */
+.chat{
+background:#000;
+padding:20px;
+border-radius:10px;
+}
+
+.mensaje{
+margin:10px 0;
+}
+
+/* BOTONES */
+button{
+background:#c62828;
+color:white;
+padding:10px;
+border:none;
+border-radius:5px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px;
+border-radius:50%;
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+<h1>Emergencias Médicas</h1>
+<p>Conviértete en el profesional que salva vidas</p>
+</section>
+
+<!-- INFORMACIÓN -->
+<div class="section">
+<h2>📚 Información de la Carrera</h2>
+
+<div class="card">
+<p><strong>Duración:</strong> 5 semestres (2 años)</p>
+<p><strong>Título:</strong> Tecnólogo Superior en Emergencias Médicas</p>
+<p><strong>Modalidad:</strong> Presencial</p>
+<p><strong>Objetivo:</strong> Formar profesionales capaces de atender emergencias médicas, estabilizar pacientes y actuar en situaciones críticas.</p>
+</div>
+
+<div class="card">
+<h3>Perfil Profesional</h3>
+<ul>
+<li>Atención prehospitalaria</li>
+<li>Soporte vital básico y avanzado</li>
+<li>Trabajo en ambulancias</li>
+<li>Intervención en desastres</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Campo Laboral</h3>
+<ul>
+<li>Hospitales</li>
+<li>ECU 911</li>
+<li>Bomberos</li>
+<li>Cruz Roja</li>
+</ul>
+</div>
+
+</div>
+
+<!-- CONTACTO -->
+<div class="section">
+<h2>📞 Información e Inscripción</h2>
+
+<div class="card">
+<p><strong>Teléfonos:</strong> 032947328 / 032967646</p>
+<p><strong>Celular:</strong> 0999383827 / 0998326909</p>
+<p><strong>Email:</strong> info@stanford.edu.ec</p>
+<p><strong>Dirección:</strong> Espejo 17-19 y Colombia, Riobamba</p>
+</div>
+</div>
+
+<!-- SIMULADOR -->
+<div class="section">
+<h2>🚑 Simulador de Emergencia</h2>
+
+<div class="card">
+<p>Paciente inconsciente ¿Qué haces?</p>
+
+<button onclick="respuesta('A')">A) Revisar signos vitales</button>
+<button onclick="respuesta('B')">B) Ignorar</button>
+
+<p id="sim"></p>
+</div>
+</div>
+
+<!-- IA MÉDICA -->
+<div class="section">
+<h2>🤖 Asistente Médico IA</h2>
+
+<div class="chat">
+<div id="chat"></div>
+
+<input type="text" id="pregunta" placeholder="Haz una pregunta médica básica">
+<button onclick="responder()">Preguntar</button>
+</div>
+</div>
+
+<a href="https://wa.me/593999383827" class="whatsapp">📲</a>
+
+<script>
+
+/* SIMULADOR */
+function respuesta(op){
+let r=document.getElementById("sim");
+
+if(op=="A"){
+r.innerText="✔ Correcto: primero revisar signos vitales";
+}else{
+r.innerText="❌ Incorrecto: debes evaluar al paciente";
+}
+}
+
+/* IA SIMPLE */
+function responder(){
+let p=document.getElementById("pregunta").value;
+let chat=document.getElementById("chat");
+
+let respuesta="";
+
+if(p.includes("paro")){
+respuesta="Debes iniciar RCP inmediatamente.";
+}else if(p.includes("sangre")){
+respuesta="Controla la hemorragia con presión directa.";
+}else{
+respuesta="Consulta a un profesional de salud.";
+}
+
+chat.innerHTML+="<div class='mensaje'>👤 "+p+"</div>";
+chat.innerHTML+="<div class='mensaje'>🤖 "+respuesta+"</div>";
+}
+
+</script>
+
+</body>
+</html>
