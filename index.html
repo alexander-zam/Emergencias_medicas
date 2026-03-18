@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Emergencias Médicas - Instituto Stanford</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7fb;
+    color: #1a1a1a;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #0a2a5e, #c62828);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header img {
+    width: 90px;
+}
+
+/* NAV */
+nav {
+    background: #081f44;
+    padding: 12px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #ff4d4d;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(10,42,94,0.85), rgba(198,40,40,0.75)),
+    url('https://images.unsplash.com/photo-1579684385127-1ef15d508118');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 110px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* BOTÓN */
+.btn {
+    background: #c62828;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #8e0000;
+}
+
+/* SECCIONES */
+.section {
+    width: 85%;
+    margin: 40px auto;
+}
+
+h2 {
+    color: #0a2a5e;
+    border-left: 6px solid #c62828;
+    padding-left: 10px;
+}
+
+/* CARDS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* DESTACADO */
+.highlight {
+    background: #e3f2fd;
+    padding: 15px;
+    border-left: 5px solid #0a2a5e;
+    margin-top: 20px;
+}
+
+/* TESTIMONIO */
+.testimonio {
+    background: #0a2a5e;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* FOOTER */
+footer {
+    background: #0a2a5e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* BOTÓN WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png">
+    <h1>Instituto Superior Universitario Stanford</h1>
+    <p>Forma parte de los profesionales que salvan vidas</p>
+</header>
+
+<nav>
+    <a href="#info">Información</a>
+    <a href="#malla">Malla</a>
+    <a href="#perfil">Perfil</a>
+    <a href="#campo">Campo laboral</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<section class="hero">
+    <h1>Emergencias Médicas</h1>
+    <p>Tu vocación puede salvar vidas. Prepárate para actuar en los momentos más críticos.</p>
+    <a href="#contacto" class="btn">Inscríbete Ahora</a>
+</section>
+
+<div class="section" id="info">
+    <h2>Información General</h2>
+
+    <div class="grid">
+        <div class="card"><strong>Duración:</strong><br>5 semestres</div>
+        <div class="card"><strong>Título:</strong><br>Tecnólogo en Emergencias Médicas</div>
+        <div class="card"><strong>Modalidad:</strong><br>Presencial</div>
+    </div>
+
+    <div class="highlight">
+        Esta carrera tiene alta demanda laboral y te permite trabajar salvando vidas desde el primer día.
+    </div>
+</div>
+
+<div class="section" id="malla">
+    <h2>Malla Curricular</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Básico</h3>
+            Morfofisiología, Bioseguridad, Primeros Auxilios
+        </div>
+
+        <div class="card">
+            <h3>Profesional</h3>
+            Emergencias clínicas, Trauma, Paciente crítico
+        </div>
+
+        <div class="card">
+            <h3>Práctico</h3>
+            Rescate, Simulación real, Ambulancias
+        </div>
+    </div>
+</div>
+
+<div class="section" id="perfil">
+    <h2>Perfil Profesional</h2>
+
+    <div class="card">
+        Serás capaz de atender emergencias, estabilizar pacientes, aplicar soporte vital y actuar en situaciones críticas con rapidez y precisión.
+    </div>
+</div>
+
+<div class="section" id="campo">
+    <h2>Campo Laboral</h2>
+
+    <div class="grid">
+        <div class="card">Hospitales</div>
+        <div class="card">Ambulancias</div>
+        <div class="card">ECU 911</div>
+        <div class="card">Bomberos</div>
+        <div class="card">Cruz Roja</div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>💬 Testimonio</h2>
+
+    <div class="testimonio">
+        "Estudiar Emergencias Médicas cambió mi vida. Hoy tengo la capacidad de salvar vidas y servir a mi comunidad. Es una carrera exigente, pero profundamente gratificante."
+    </div>
+</div>
+
+<div class="section" id="contacto">
+    <h2>Contacto</h2>
+
+    <div class="card">
+        <p><strong>Teléfono:</strong> 032947328</p>
+        <p><strong>Celular:</strong> 0999383827</p>
+        <p><strong>Email:</strong> info@stanford.edu.ec</p>
+        <p><strong>Ubicación:</strong> Riobamba, Ecuador</p>
+
+        <a href="mailto:info@stanford.edu.ec" class="btn">Solicitar Información</a>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Instituto Superior Universitario Stanford</p>
+</footer>
+
+<a href="https://wa.me/593999383827" class="whatsapp">📲</a>
+
+</body>
+</html>
